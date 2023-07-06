@@ -62,7 +62,7 @@
 }
 
 .mobile-menu-container {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 50px;
   left: 0;
@@ -77,8 +77,12 @@
   line-height: 1.2;
   letter-spacing: -0.56px;
   text-align: center;
-  transform: translateX(100%);
+  transform: translateX(-100vw);
   transition: transform var(--transition);
+}
+
+.mobile-menu-container.is-open {
+  transform: translateX(0);
 }
 
 .mobile-nav-list {
@@ -102,10 +106,10 @@
 }
 
 @media screen and (max-width: 767px) {
-  .mobile-menu-container.is-open {
+  /* .mobile-menu-container.is-open {
     display: block;
     transform: translateX(0);
-  }
+  } */
 
   .header {
     min-width: 320px;
